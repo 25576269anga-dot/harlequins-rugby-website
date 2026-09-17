@@ -1,0 +1,482 @@
+/* =========================================================
+   Port Moresby Harlequins RUFC — stylesheet
+   Basic CSS only (per A2 requirements): no framework,
+   no CSS grid/animation libraries, no downloaded template.
+   ========================================================= */
+
+/* ---- Design tokens ----
+   Palette pulled from the official Harlequins diamond jersey and crest:
+   magenta/pink, emerald green, teal/sky blue, gold/yellow and deep navy. */
+:root {
+  --navy: #14213d;
+  --navy-dark: #090f1e;
+  --maroon: #7b1e3a;
+  --pink: #d6236a;
+  --green: #1f8a4c;
+  --teal: #0f7fa8;
+  --gold: #e0a629;
+  --cream: #f6f1e7;
+  --charcoal: #221f1f;
+  --line: #ddd4c0;
+  --focus: #0f7fa8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--charcoal);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .nav a, button, .btn {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+h1, h2, h3, h4 { color: var(--navy); line-height: 1.25; }
+
+a { color: var(--pink); }
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+img { max-width: 100%; display: block; }
+.section-heading + img { border-radius: 6px; margin: 0 0 24px; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- Skip link (accessibility) ---- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--gold);
+  color: var(--navy-dark);
+  padding: 10px 16px;
+  font-weight: bold;
+  z-index: 100;
+}
+.skip-link:focus { left: 10px; top: 10px; }
+
+/* ---- Diamond / harlequin pattern strip ----
+   Echoes the multi-colour harlequin diamond jersey (pink / green / teal / gold). */
+.harlequin-strip {
+  height: 14px;
+  background-image:
+    linear-gradient(135deg, var(--pink) 25%, transparent 25.5%, transparent 50%, var(--green) 50.5%, var(--green) 75%, transparent 75.5%),
+    linear-gradient(45deg, var(--teal) 25%, transparent 25.5%, transparent 50%, var(--gold) 50.5%, var(--gold) 75%, transparent 75.5%);
+  background-size: 28px 28px;
+  background-color: var(--navy);
+}
+
+/* Larger decorative diamond band used on hero sections / gallery dividers */
+.harlequin-band {
+  height: 26px;
+  background-image:
+    linear-gradient(135deg, var(--pink) 25%, transparent 25.5%, transparent 50%, var(--green) 50.5%, var(--green) 75%, transparent 75.5%),
+    linear-gradient(45deg, var(--teal) 25%, transparent 25.5%, transparent 50%, var(--gold) 50.5%, var(--gold) 75%, transparent 75.5%);
+  background-size: 52px 52px;
+  background-color: var(--navy-dark);
+}
+
+/* ---- Site header / nav ---- */
+header.site-header {
+  background: var(--navy);
+  color: #fff;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 18px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand:hover, .brand:focus { text-decoration: none; }
+
+.crest {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 6px;
+  background: var(--navy-dark);
+  padding: 3px;
+}
+
+.brand-text h1 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.brand-text span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-style: italic;
+}
+
+nav.nav {
+  background: var(--navy-dark);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 18px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav a:hover, .nav a:focus {
+  border-bottom: 3px solid var(--gold);
+}
+
+.nav a[aria-current="page"] {
+  border-bottom: 3px solid var(--gold);
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* ---- Hero ---- */
+.hero {
+  background: var(--navy);
+  color: #fff;
+  padding: 60px 20px 70px;
+  text-align: center;
+}
+
+.hero h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin: 0 0 10px;
+}
+
+.hero p.lead {
+  font-size: 1.15rem;
+  max-width: 620px;
+  margin: 0 auto 22px;
+  color: #eee;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy-dark);
+  text-decoration: none;
+  padding: 12px 26px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover, .btn:focus { background: #e0b544; }
+
+.btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn.secondary:hover, .btn.secondary:focus { background: rgba(255,255,255,0.12); }
+
+/* ---- Sections ---- */
+section {
+  padding: 46px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+section:last-of-type { border-bottom: none; }
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading p {
+  max-width: 640px;
+  margin: 8px auto 0;
+  color: #4a4540;
+}
+
+.alt-bg { background: #fff; }
+
+/* ---- Card layout (no CSS grid — floated/inline-block for A2 simplicity) ---- */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--pink);
+  padding: 22px;
+  width: 260px;
+}
+
+.card h3 { margin-top: 0; }
+
+.card.alt { border-top-color: var(--green); }
+
+/* Cycle through the four harlequin colours across a row of cards */
+.card-row .card:nth-child(4n+1) { border-top-color: var(--pink); }
+.card-row .card:nth-child(4n+2) { border-top-color: var(--green); }
+.card-row .card:nth-child(4n+3) { border-top-color: var(--teal); }
+.card-row .card:nth-child(4n+4) { border-top-color: var(--gold); }
+
+/* ---- Lists with diamond marker to echo club identity ---- */
+ul.diamond-list { list-style: none; padding-left: 0; }
+ul.diamond-list li {
+  padding-left: 26px;
+  position: relative;
+  margin-bottom: 10px;
+}
+ul.diamond-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: var(--pink);
+  transform: rotate(45deg);
+}
+ul.diamond-list li:nth-child(4n+2)::before { background: var(--green); }
+ul.diamond-list li:nth-child(4n+3)::before { background: var(--teal); }
+ul.diamond-list li:nth-child(4n+4)::before { background: var(--gold); }
+
+/* ---- Photo gallery ---- */
+.photo-figure {
+  margin: 0 0 24px;
+}
+.photo-figure img {
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+.photo-figure figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #6b6459;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+.gallery-grid figure {
+  width: 280px;
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.gallery-grid figure:nth-child(4n+1) { border-top: 5px solid var(--pink); }
+.gallery-grid figure:nth-child(4n+2) { border-top: 5px solid var(--green); }
+.gallery-grid figure:nth-child(4n+3) { border-top: 5px solid var(--teal); }
+.gallery-grid figure:nth-child(4n+4) { border-top: 5px solid var(--gold); }
+
+.gallery-grid img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid figcaption {
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  color: var(--charcoal);
+}
+
+.gallery-grid figcaption strong {
+  display: block;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+/* ---- Hero with background photo (club/team image behind gradient) ---- */
+.hero.photo-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.hero.photo-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9,15,30,0.88), rgba(9,15,30,0.72));
+}
+.hero.photo-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Tables ---- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: var(--navy);
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background: var(--navy);
+  color: #fff;
+}
+
+tr:nth-child(even) td { background: #faf7f0; }
+
+/* ---- Forms ---- */
+fieldset {
+  border: 1px solid var(--line);
+  padding: 20px;
+  margin: 0 0 26px;
+  background: #fff;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--navy);
+  padding: 0 8px;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+.form-row {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.radio-group label, .checkbox-group label {
+  font-weight: normal;
+  display: inline-block;
+  margin-right: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  max-width: 420px;
+  padding: 9px 10px;
+  border: 1px solid #b9ad91;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea { max-width: 100%; }
+
+.hint {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #6b6459;
+  display: block;
+  margin-top: 4px;
+}
+
+.required-mark { color: var(--pink); }
+
+/* ---- Footer ---- */
+footer.site-footer {
+  background: var(--navy-dark);
+  color: #ddd;
+  padding: 34px 20px;
+}
+
+footer.site-footer a { color: var(--gold); }
+
+.footer-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 960px;
+  margin: 0 auto 20px;
+}
+
+.footer-cols h2 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid #2a3550;
+  padding-top: 16px;
+  color: #aaa;
+}
+
+/* ---- Utility ---- */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---- Small screens: stack nav and hero text (simple, non-advanced) ---- */
+@media (max-width: 640px) {
+  .nav ul { flex-direction: column; }
+  .hero h2 { font-size: 1.6rem; }
+  .card { width: 100%; }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Registration | Port Moresby Harlequins RUFC</title>
+<meta name="description" content="Contact Port Moresby Harlequins Rugby Union Club and register as a member.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="harlequin-strip" role="presentation"></div>
+  <div class="brand-row">
+    <a class="brand" href="index.html">
+      <img class="crest" src="images/logo.png" alt="Port Moresby Harlequins club crest logo">
+      <div class="brand-text">
+        <h1>Port Moresby Harlequins</h1>
+        <span>Rugby Union Club &mdash; "Strength in Numbers"</span>
+      </div>
+    </a>
+  </div>
+  <nav class="nav" aria-label="Primary">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teams.html">Teams &amp; Activities</a></li>
+      <li><a href="register.html" aria-current="page">Contact &amp; Registration</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero photo-hero" style="background-image:url('images/celebration.jpg');">
+    <div class="container">
+      <h2>Contact &amp; Registration</h2>
+      <p class="lead">Get in touch with the club, or become a Harlequins member today.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Contact Information</h2>
+        <p>Reach out with any questions about membership, training, or the club generally.</p>
+      </div>
+
+      <table>
+        <caption>Club contact details</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Club</th>
+            <td>Port Moresby Harlequins Rugby Union Club</td>
+          </tr>
+          <tr>
+            <th scope="row">Address</th>
+            <td>Port Moresby, National Capital District, Papua New Guinea</td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td><a href="mailto:25576269anga@student.pnguot.ac.pg">25576269anga@student.pnguot.ac.pg</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Phone</th>
+            <td>(add official club number)</td>
+          </tr>
+          <tr>
+            <th scope="row">Training Ground</th>
+            <td>Bava Park, Port Moresby &mdash; see the <a href="teams.html#training-schedule">training schedule</a> for weekly times</td>
+          </tr>
+          <tr>
+            <th scope="row">Social Media</th>
+            <td><a href="#">Facebook</a> &middot; <a href="#">Instagram</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="membership" class="alt-bg">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Membership Registration</h2>
+        <p>Fields marked <span class="required-mark">*</span> are required.</p>
+      </div>
+
+      <form action="#" method="post" novalidate>
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <div class="form-row">
+            <label for="full-name">Full Name <span class="required-mark">*</span></label>
+            <input type="text" id="full-name" name="full-name" required autocomplete="name">
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email Address <span class="required-mark">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-row">
+            <label for="telephone">Telephone <span class="required-mark">*</span></label>
+            <input type="tel" id="telephone" name="telephone" required autocomplete="tel"
+                   pattern="[0-9+ ]{7,15}" placeholder="e.g. 7XXX XXXX">
+            <span class="hint">Numbers, spaces and + only.</span>
+          </div>
+
+          <div class="form-row">
+            <label for="dob">Date of Birth <span class="required-mark">*</span></label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Membership Type</legend>
+          <div class="radio-group" role="radiogroup" aria-label="Membership type">
+            <label><input type="radio" name="membership-type" value="player" required> Player</label>
+            <label><input type="radio" name="membership-type" value="social"> Social Member</label>
+            <label><input type="radio" name="membership-type" value="supporter"> Supporter</label>
+            <label><input type="radio" name="membership-type" value="junior"> Junior Member</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Rugby Experience</legend>
+          <div class="radio-group" role="radiogroup" aria-label="Rugby experience level">
+            <label><input type="radio" name="experience" value="beginner" required> Beginner</label>
+            <label><input type="radio" name="experience" value="intermediate"> Intermediate</label>
+            <label><input type="radio" name="experience" value="experienced"> Experienced</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred Activity</legend>
+          <div class="form-row">
+            <label for="activity">Select an activity <span class="required-mark">*</span></label>
+            <select id="activity" name="activity" required>
+              <option value="">Select an activity</option>
+              <option value="premier">Premier Rugby</option>
+              <option value="a-grade">A Grade</option>
+              <option value="womens">Women's Rugby</option>
+              <option value="junior">Junior Development</option>
+              <option value="sevens">Rugby Sevens</option>
+              <option value="social">Social Rugby</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interests</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="interests" value="playing"> Playing</label>
+            <label><input type="checkbox" name="interests" value="coaching"> Coaching</label>
+            <label><input type="checkbox" name="interests" value="volunteering"> Volunteering</label>
+            <label><input type="checkbox" name="interests" value="supporting"> Supporting Events</label>
+            <label><input type="checkbox" name="interests" value="community"> Community Activities</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Information</legend>
+          <div class="form-row">
+            <label for="additional-info">Anything else we should know?</label>
+            <textarea id="additional-info" name="additional-info" rows="5"
+                      placeholder="Medical notes, previous clubs, availability, etc."></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Submit Registration</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-cols">
+    <div>
+      <h2>Port Moresby Harlequins RUFC</h2>
+      <p>Port Moresby, Papua New Guinea</p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:25576269anga@student.pnguot.ac.pg">25576269anga@student.pnguot.ac.pg</a><br>
+      Phone: +675 72033895</p>
+    </div>
+    <div>
+      <h2>Follow Us</h2>
+      <p><a href="#">Facebook</a><br><a href="#">Instagram</a></p>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2026 Port Moresby Harlequins Rugby Union Club. Student project for HTML5 web design assessment &mdash; not the club's official website.</p>
+</footer>
+
+</body>
+</html>
