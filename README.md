@@ -14,8 +14,8 @@ A three-page semantic HTML5 website for a fictional/student-project rugby union 
 
 | # | Requirement | Where to find it |
 |---|---|---|
-| 1 | GitHub repository URL | *Add your repository link here once pushed:* `https://github.com/YOUR-USERNAME/YOUR-REPO` |
-| 2 | Published website URL | *Add your GitHub Pages (or other approved host) link here:* `https://YOUR-USERNAME.github.io/YOUR-REPO/` |
+| 1 | GitHub repository URL | *Add your repository link here once pushed:* `https://github.com/25576269anga-dot/harlequins-rugby-website` |
+| 2 | Published website URL | *Add your GitHub Pages (or other approved host) link here:* `https://25576269anga-dot.github.io/harlequins-rugby-website/` |
 | 3 | `README.md` | This file |
 | 4 | Complete source code and assets | `index.html`, `teams.html`, `register.html`, `css/style.css`, `images/` (all in this package) |
 | 5 | HTML validation evidence | `validation-evidence.md` in this package |
